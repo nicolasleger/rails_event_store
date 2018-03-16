@@ -4,7 +4,6 @@ require_relative 'mappers/events_pb.rb'
 
 module RubyEventStore
   RSpec.describe NewClient do
-    TestEvent = Class.new(RubyEventStore::Event)
 
     specify 'publish_event returns :ok when success' do
       client = RubyEventStore::NewClient.new(repository: InMemoryRepository.new)
