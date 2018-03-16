@@ -50,7 +50,7 @@ module RubyEventStore
       end
 
       def each
-        @repository.read_events_forward(@stream_name, :head, 1)
+        @repository.read_events_forward(@stream_name, :head, PAGE_SIZE)
       end
 
     end
